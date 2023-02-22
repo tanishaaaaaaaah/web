@@ -1,0 +1,21 @@
+INSTALL NODE
+www.nodejs.org -> version and download and install -> next next
+node -v
+npm -v (node packet manager)
+
+INSTALL ANGULAR CLI
+npm install -g @angular/cli
+ng -v
+ng.js -> open with node js (if it has some other logo instead of node)
+
+SET PATH
+run -> appdata
+->env variable (user variable) : ANGULAR = appdata/roaming/npm/nodem_module/angular/cli/bin
+->env variable (user variable) : NODE = appdata/roaming/npm
+
+create new app = ng new app_name
+create new component = ng generate component component_name
+build app = ng serve
+build and open app = ng serve --open
+create new service = ng generate service service_name
+ng generate component recipes/recipeDetail = create a component inside another component

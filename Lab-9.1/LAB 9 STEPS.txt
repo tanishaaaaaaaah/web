@@ -1,0 +1,14 @@
+npm init
+npm install --save express
+npm install mongodb
+npm install mongoose
+npm install -g nodemon
+
+LAB 9
+Mongo password:
+username: tanishagondke@gmail.com
+password: t@nisha2001
+
+mongo cloud -> database -> build database -> M0 cluster (free) -> Username: tanishagondke :: Password: t@nisha2001 -> create user -> local environment -> add current ip address -> finish and close
+click on cluster0 -> collection (tab) -> add my own data -> database name: friend -> Collection name: FRIENDS -> create -> insert document -> apply
+click on cluster0 -> connect (tab) -> connect using vs code -> mongodb+srv://tanishagondke:t@nisha@cluster0.u1fay3q.mongodb.net/test

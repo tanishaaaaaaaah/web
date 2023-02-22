@@ -1,0 +1,14 @@
+<div class="body">
+<h1>{{title}}</h1>
+<div class="box">
+    <input type="text" placeholder="Enter new item" #task>
+    <br><br>
+    <input type="number" placeholder="Quantity" #quantity>
+    <br><br>
+</div>
+<button (click)="addTask(task.value, quantity.value)" class="addBtn">Add</button>
+<br><br>
+<ul *ngFor="let item of list">
+    <li>{{item.name}}({{item.quantity}})&nbsp;&nbsp;&nbsp;<button (click)="removeTask(item.id)" class="removeBtn">Remove</button></li>
+</ul>
+</div>

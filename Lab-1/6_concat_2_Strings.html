@@ -1,0 +1,31 @@
+<html>
+  <style></style>
+  <script>
+    function myFunction() {
+      var string1 = document.getElementById("first").value;
+      var string2 = document.getElementById("second").value;
+
+      var concatedString = string1 + string2;
+      document.getElementById("result").value = string1.concat(string2);
+    }
+  </script>
+
+  <table>
+    <tr>
+      <td><label>text 1</label></td>
+      <td><input id="first" type="text" /></td>
+    </tr>
+
+    <tr>
+      <td><label>text 2</label></td>
+      <td><input id="second" type="text" /></td>
+    </tr>
+
+    <tr>
+      <td><label>RESULT</label></td>
+      <td><input id="result" type="text" /></td>
+    </tr>
+  </table>
+
+  <button onclick="myFunction()">Check</button>
+</html>

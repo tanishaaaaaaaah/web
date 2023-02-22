@@ -1,0 +1,35 @@
+
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="inputboxes">
+          <input [(ngModel)]="new_item" id="box1" type="text" value="" class="col-7 form-control" placeholder="Item Name" style="width:300px;">
+          <input [(ngModel)]="quantity" id="box2" type="number" value="" class="col-7 form-control" placeholder="Quantity" style="width:300px;">              
+      </div>
+
+      <div class="btn-group">
+          <button id="Add" (click)="add()">Add Item</button>
+          <button id="Remove" (click)="remove()">Delete Item</button>
+          <!--button id="Display" (click)="display()">Display Items</button-->
+          <button id="Clear" (click)="clear()">Clear</button>
+      </div>
+
+      <div *ngIf="display"> <!--for displaying elements-->
+          <table>
+            <tr>Shopping List Is: </tr>
+            <ng-container *ngFor="let product of shoppingList">
+              <tr>       
+                {{ product.new_item }}
+                {{ product.quantity }}
+              </tr>
+            </ng-container>
+          </table>
+        </div>
+
+      </div>
+  </body>
+</html>

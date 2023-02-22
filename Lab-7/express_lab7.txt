@@ -1,0 +1,20 @@
+windows cmd 
+npm install --save express
+npm install -g nodemon
+
+visual studio 
+create a folder lab 7
+npm init
+name the index.json file
+-----
+add start and dependencides(express) attributes in the file : package.json
+create a new file with extension .js name can be package or index (which ever name you gave first)
+----
+add code in index.json
+----
+npm install --save express in vs terminal
+node module dependenices will be installed in the vs explorer
+npm run start OR node index.js OR nodemon index.js (run again and again to overcome errors)
+----
+vs terminal will have console log msg
+browser -> localhost:3000

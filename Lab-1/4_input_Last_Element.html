@@ -1,0 +1,46 @@
+<html>
+  <style></style>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("first").value;
+      var y = document.getElementById("second").value;
+      var z = document.getElementById("third").value;
+
+      var a = x % 10;
+      var b = y % 10;
+      var c = z % 10;
+
+      if (a == b && b == c) {
+        document.getElementById("res").value = "Same";
+        //console.log(`${x}, ${y} and ${z} have the same last digit.`);
+      } else {
+        document.getElementById("res").value = "Different";
+      }
+
+      //console.log("The last digit of ", digit, " is ", lastdigit);
+    }
+  </script>
+
+  <table>
+    <tr>
+      <td><label>Number 1</label></td>
+      <td><input id="first" type="number" /></td>
+    </tr>
+
+    <tr>
+      <td><label>Number 2</label></td>
+      <td><input id="second" type="number" /></td>
+    </tr>
+    <tr>
+      <td><label>Number 3</label></td>
+      <td><input id="third" type="number" /></td>
+    </tr>
+
+    <tr>
+      <td><label>Result</label></td>
+      <td><input id="res" type="text" /></td>
+    </tr>
+  </table>
+
+  <button onclick="myFunction()">Check</button>
+</html>

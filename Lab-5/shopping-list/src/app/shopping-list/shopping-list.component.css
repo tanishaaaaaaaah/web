@@ -1,0 +1,47 @@
+.body{
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 30%;  
+    margin-right: 30%;
+    background-size: cover;
+    text-align: center;
+    box-shadow: 8px 8px 8px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: antiquewhite;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: rgb(42, 20, 139);
+}
+.box{
+    padding: 20pt;
+}
+input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #D1D1D4;
+    padding-left: 24px;
+    font-weight: 700;
+}
+.addBtn{
+    background-color: rgb(12, 214, 46);
+    border: none;
+    width: 70pt;
+    height: 20pt;
+    border-radius: 3pt;
+    color: white;
+    font-weight:800;
+    text-align: center;
+    
+}
+.removeBtn{
+    background-color: rgb(233, 46, 13);
+    border: none;
+    width: 70pt;
+    height: 20pt;
+    border-radius: 3pt;
+    color: white;
+    font-weight:800;
+}

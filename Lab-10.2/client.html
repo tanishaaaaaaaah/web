@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chat Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body,
+    button,
+    input {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .parentChat {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #chat-container {
+      position: fixed;
+      top: 0;
+      text-align: center;
+      width: 600px;
+      height: 6em;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #e5e5e5;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px #aaa;
+      z-index: 1;
+    }
+
+    .messagesDiv {
+      width: 600px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      padding-top: 150px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      font-size: 16px;
+      outline: none;
+      background-color: #f2f2f2;
+      box-shadow: 0px 0px 5px #ddd;
+      height: 30px;
+      transition: all 0.3s ease-in-out;
+      margin-right: 10px;
+    }
+
+    input[type="text"]:focus {
+      border-color: #57B1FB;
+      box-shadow: 0px 0px 5px #57B1FB;
+    }
+
+    input[type="submit"] {
+      padding: 10px 15px;
+      background-color: #57B1FB;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      height: 40px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4095c6;
+    }
+
+    button[type="submit"] {
+      padding: 10px 15px;
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      height: 40px;
+      transition: all 0.3s ease-in-out;
+      margin-left: 10px;
+      box-shadow: 0px 0px 5px #ddd;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #1E9E5D;
+      box-shadow: 0px 0px 5px #1E9E5D;
+    }
+
+    button[type="submit"]:active {
+      background-color: #1B7D4A;
+      box-shadow: 0px 0px 5px #1B7D4A;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 5px;
+    }
+
+    li.sender,
+    li.receiver {
+      max-width: 200px;
+    }
+
+    li.sender {
+      text-align: right;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px #aaa;
+      float: right;
+      align-items: center;
+      clear: both;
+    }
+
+    .sender {
+      text-align: right;
+    }
+
+    .sender .message {
+      background-color: rgb(31, 231, 111);
+      color: white;
+      margin-left: 10px;
+    }
+
+    li.receiver {
+      text-align: left;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px #aaa;
+      float: left;
+      align-items: center;
+      clear: both;
+    }
+
+    .receiver {
+      text-align: left;
+    }
+
+    .receiver .message {
+      background-color: rgb(149, 241, 186);
+      float: left;
+      margin-right: 10px;
+    }
+
+    li.newUser,
+    li.userLeft {
+      text-align: center;
+      padding: 30px;
+      margin: 0 auto;
+      font-size: 20px;
+      float: inherit;
+      align-items: center;
+      clear: both;
+    }
+
+    li.newUser {
+      color: #4caf50;
+    }
+
+    li.userLeft {
+      color: rgb(239, 35, 35);
+    }
+
+    h1#welcomeMsg {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    i.name {
+      color: #4caf50;
+    }
+
+    .message {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border-radius: 10px;
+      word-wrap: break-word;
+      font-size: 14px;
+      display: inline-block;
+      margin: 10px 0;
+      clear: both;
+    }
+
+    .username {
+      font-weight: bold;
+      font-size: 12px;
+      margin-right: 15em;
+      margin-left: 1px;
+      text-align: left;
+    }
+
+    .time {
+      font-size: 12px;
+      color: gray;
+      text-align: right;
+      display: block;
+    }
+
+    .message .time {
+      margin-top: 10px;
+    }
+
+    .receiver .time {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parentChat">
+    <div id="chat-container">
+      <h1 id="welcomeMsg"></h1>
+      <form action="">
+        <input type="text" id="message-input">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <div class="messagesDiv">
+    <ul id="messages"></ul>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    var messageInput = document.getElementById('message-input');
+    var form = document.querySelector('form');
+    var messages = document.getElementById('messages');
+    var welcomeMsg = document.getElementById('welcomeMsg');
+    var currentUsername;
+    socket.emit('username request');
+
+    socket.on('username request', function () {
+      var username = prompt('Please enter your username:');
+      var i = document.createElement('i');
+      i.classList.add('name');
+      i.innerHTML = username;
+      welcomeMsg.innerHTML = 'Hello ';
+      welcomeMsg.appendChild(i);
+      socket.emit('username', username);
+      currentUsername = username;
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      socket.emit('new message', messageInput.value);
+      messageInput.value = '';
+    });
+
+    socket.on('new message', function (message) {
+      var li = document.createElement('li');
+      var username = message.username;
+      var text = message.text;
+      var time = message.time;
+
+      if (username === currentUsername) {
+        li.classList.add('sender');
+        li.innerHTML = '<p class="message">' + text + '</p>' +
+          '<span class="time">' + time + '</span>';
+      } else {
+        li.classList.add('receiver');
+        li.innerHTML = '<span class="username">' + username + '</span>' +
+          '<p class="message">' + text + '</p>' +
+          '<span class="time">' + time + '</span>';
+      }
+      messages.appendChild(li);
+    });
+
+    socket.on('new user', function (username) {
+      var li = document.createElement('li');
+      li.classList.add('newUser');
+      li.innerHTML = username + ' has joined the chat';
+      messages.appendChild(li);
+    });
+
+    socket.on('user left', function (username) {
+      var li = document.createElement('li');
+      li.classList.add('userLeft');
+      li.innerHTML = username + ' has left the chat';
+      messages.appendChild(li);
+    });
+
+  </script>
+</body>
+
+</html>

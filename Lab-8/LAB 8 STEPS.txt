@@ -1,0 +1,22 @@
+LAB 8
+create folders node1 and public in Lab_8 folder
+------------------------
+vs cmd = npm install body-parser
+vs cmd (inside node1 fodler)= npm init
+	-> name the .json file (package.json or index.json) [inside node1]
+------------------------
+create 2 .js files in node1 folder
+(1)server.js	(2) service.js
+
+add code in these files
+------------------------
+add index html in oublic folder -> add code in it
+------------------------
+add start(server.js) and dependencies(express) in package.json
+------------------------
+vs cmd (inside Lab_8) = npm install -save express in
+------------------------
+vs cmd = > cd to node1
+   run = >node server.js
+-------------------------
+localhost://3333

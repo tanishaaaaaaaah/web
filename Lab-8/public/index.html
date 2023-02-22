@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Node App Template</title>
+  </head>
+
+  <style>
+    input {
+      border: 2px solid a;
+      border-radius: 3px;
+      border-width: 8px;
+      height: 30px;
+      width: 250px;
+    }
+
+    button {
+      border-width: 8px;
+      border-radius: 3px;
+      border-color: solid #3d5330;
+      height: 50px;
+      width: 100px;
+      background-color: #3d5330;
+      font-size: 20px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      color: white;
+      margin-top: 50px;
+    }
+
+    form {
+      text-align: center;
+      padding: 20px;
+    }
+    body {
+      /*background-color: #E2DAD4;*/
+      padding: 120px;
+      flex: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: linear-gradient(to bottom, #ff6e7f, #bfe9ff);
+    }
+  </style>
+
+  <body>
+    <form action="/greeting" method="GET">
+      <input name="firstname" type="text" placeholder="First Name" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <br />
+
+    <form action="/add" method="POST">
+      <input name="num1" type="number" />
+      <span>PLUS</span>
+      <input name="num2" type="number" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/sub" method="POST">
+      <input name="num1" type="number" />
+      <span>MINUS</span>
+      <input name="num2" type="number" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/mul" method="POST">
+      <input name="num1" type="number" />
+      <span>MULTIPLIED BY</span>
+      <input name="num2" type="number" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/div" method="POST">
+      <input name="num1" type="number" />
+      <span>DIVIDED BY</span>
+      <input name="num2" type="number" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/concatFun" method="POST">
+      <input name="num1" type="number" />
+      <span>CONCATS</span>
+      <input name="num2" type="number" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/concatStr" method="GET">
+      <input name="string1" type="text" placeholder="String 1" />
+      <span>CONCATS</span>
+      <input name="string2" type="text" placeholder="String 2" />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/revStr" method="GET">
+      <input name="string1" type="text" placeholder="String 1" />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <form action="/lengthStr" method="GET">
+      <input name="string1" type="text" placeholder="String 1" />
+      <button type="submit">SUBMIT</button>
+    </form>
+  </body>
+</html>
+<form action="/sortStr" method="GET">
+  <input name="string1" type="text" placeholder="String 1" />
+  <button type="submit">SUBMIT</button>
+</form>

@@ -1,0 +1,79 @@
+<!--p>calculator-component works!</p>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div class="contents">
+        <h1>CALCULATOR</h1> 
+
+        <input (keyup)="onKey1($event)" type="text" name="n1" id="n1" placeholder="First Number">
+        <input (keyup)="onKey2($event)" type="text" name="n2" id="n2" placeholder="Second Number">
+
+
+        <p>
+          <b>First Number: <input type = "text" id = "n1"class="box"  placeholder="First number"/>  </b>
+          [(ngModel)]="n1"
+        </p>
+
+        <p>
+          <b>Second Number: <input type ="text" id="n2" class="box" placeholder="Second number"/> </b>
+           [(ngModel)]="n2"
+        </p>
+
+        <p>
+          <b>Result: <input type ="text" id="result" class="box" placeholder="Result"/></b>
+        </p>
+
+        <br>
+        <input type="button" id="reset" (click)="clear()" value="Reset"/>
+        <input type="button" id="addition" (click)="add()" value="Addition"/>
+        <input type="button" id="subtraction" (click)="sub()" value="Subtraction"/>
+        <input type="button" id="division" (click)="multiply()" value="Multiplication"/>
+        <input type="button" id="multiplication" (click)="divide()" value="Divison"/>
+
+        <input type="button" id="reset" (click)="clear()" value="Reset">
+      </div>
+    </body>
+</html-->
+
+<html>
+  <head> </head>
+  <body>
+    <div class="bg">
+      <!--background image css-->
+    </div>
+
+    <div class="inputboxes">
+      <input
+        (keyup)="onKey1($event)"
+        type="text"
+        name="n1"
+        id="n1"
+        placeholder="First Number"
+      />
+      <input
+        (keyup)="onKey2($event)"
+        type="text"
+        name="n2"
+        id="n2"
+        placeholder="Second Number"
+      />
+    </div>
+
+    <br />
+
+    <div class="buttons">
+      <button (click)="add()">A d d i t i o n</button>
+      <button (click)="sub()">S u b t r a c t i o n</button>
+      <button (click)="multiply()">M u l t i p l i c a t i o n</button>
+      <button (click)="divide()">D i v i s i o n</button>
+    </div>
+
+    <br />
+
+    <h3>R E S U L T : {{ result }}</h3>
+    <!-- INTERPOLATION {{value}} is injecting value from ts to html-->
+  </body>
+</html>
